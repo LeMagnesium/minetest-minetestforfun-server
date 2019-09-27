@@ -134,13 +134,13 @@ end
 
 
 minetest.register_on_dieplayer(function(player)
-	if minetest.setting_getbool("creative_mode") or not player then
+	if minetest.settings:get_bool("creative_mode") or not player then
 		return
 	end
 	local player_name = player:get_player_name()
 	if player_name == "" then return end
 
-	local pos = player:getpos()
+	local pos = player:get_pos()
 	pos.y = math.floor(pos.y + 0.5)
 
 	minetest.chat_send_player(player_name, 'Died at '..math.floor(pos.x)..','..math.floor(pos.y)..','..math.floor(pos.z))
@@ -216,7 +216,6 @@ minetest.register_on_dieplayer(function(player)
 			armor:set_player_armor(player)
 		end
 	end
-	minetest.chat_send_player(player_name, 'Your bones is at '..math.floor(bones_pos.x)..','..math.floor(bones_pos.y)..','..math.floor(bones_pos.z))
+	minetest.chat_send_player(player_name, 'Your bones are at '..math.floor(bones_pos.x)..','..math.floor(bones_pos.y)..','..math.floor(bones_pos.z))
 	minetest.get_node_timer(bones_pos):start(10)
 end)
-

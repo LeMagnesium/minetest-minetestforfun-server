@@ -1,5 +1,5 @@
 
-print (" ---- Overrider christmas_craft = true! ---- ")
+print(" ---- Overrider christmas_craft = true! ---- ")
 
 local dirttiles = {"snow.png", "default_dirt.png", {name = "default_dirt.png^grass_w_snow_side.png", tileable_vertical = false}}
 local snowballdrop = {items = {'default:snow'}, rarity = 0}
@@ -92,5 +92,4 @@ if minetest.registered_items["woodsoils:dirt_with_leaves_2"] then
 end
 
 
-print (" ---- Overrider christmas_craft [OK] ---- ")
-
+print(" ---- Overrider christmas_craft [OK] ---- ")
