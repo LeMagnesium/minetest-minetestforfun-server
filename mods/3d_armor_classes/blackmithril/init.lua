@@ -1,4 +1,4 @@
-if armor_materials.blackmithril then
+if armor.materials.blackmithril then
 
 	-- Register helmets
 	armor:register_armor(":3d_armor:helmet_blackmithril", {

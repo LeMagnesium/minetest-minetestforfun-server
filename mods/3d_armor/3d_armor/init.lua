@@ -239,7 +239,6 @@ local function init_player_armor(player)
 			-- FIN modif MFF (crabman/24/06/2015)
 			return 1
 		end,
-		end,
 		allow_take = function(inv, listname, index, stack, player)
 			return stack:get_count()
 		end,

@@ -198,7 +198,7 @@ if armor.materials.mithril then
 	})
 end
 
-if armor_materials.blackmithril then
+if armor.materials.blackmithril then
 	armor:register_armor("shields:shield_blackmithril", {
 		description = "Black Mithril Shield (Warrior)",
 		inventory_image = "shields_inv_shield_black_mithril_warrior.png",

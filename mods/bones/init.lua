@@ -202,14 +202,13 @@ minetest.register_on_dieplayer(function(player)
 
 	--3d_armor
 	if minetest.get_modpath("3d_armor") then
-		local name, player_inv, armor_inv, pos = armor:get_valid_player(player, "[on_dieplayer]")
+		local name, armor_inv = armor:get_valid_player(player, "[on_dieplayer]")
 		if name then
 			for i=1, player_inv:get_size("armor") do
 				local stack = armor_inv:get_stack("armor", i)
 				if stack:get_count() > 0 and (not pclasses.data.reserved_items[stack:get_name()] or
 				not pclasses.api.util.can_have_item(name, stack:get_name())) then
 					bones_inv:add_item("main", stack)
-					armor_inv:set_stack("armor", i, nil)
 					player_inv:set_stack("armor", i, nil)
 				end
 			end

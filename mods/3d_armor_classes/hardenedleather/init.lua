@@ -1,4 +1,4 @@
-if armor_materials.hardenedleather then
+if armor.materials.hardenedleather then
 
 	-- Register helmets
 	armor:register_armor(":3d_armor:helmet_hardenedleather", {
